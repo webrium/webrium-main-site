@@ -1,15 +1,15 @@
-<nav class="navbar navbar-dark navbar-expand py-3" style="background: #4c4262;">
-  <div class="nav-item">
-    @if($site->nav_brand??false)
-    <a class="navbar-brand" href="@url($site->nav_brand->value)">{{$site->nav_brand->data}}</a>
-    @endif
-  </div>
+<nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
 
+        <ul class="uk-navbar-nav">
+            @if($site->nav_brand??false)
+            <li class="uk-active"><a href="@url($site->nav_brand->value)">{{$site->nav_brand->data}}</a></li>
+            @endif
 
-    @foreach($site->nav as $key=>$nav)
-    <div class="nav-item">
-      <a class="nav-link" href="@url($nav->value)">{{$nav->data??''}}</a>
+            @foreach($site->nav as $key=>$nav)
+            <li><a href="{{url($nav->value)}}">{{$nav->data}}</a></li>
+            @endforeach
+        </ul>
+
     </div>
-    @endforeach
-
 </nav>
