@@ -1,11 +1,10 @@
-<footer class="" style="background: #e6e6e6;">
-  <div class="container-fluid p-3 p-md-5">
+<div class="uk-padding uk-margin-top" dir="ltr" style="background: #646464;color: white;">
 
-    <ul class="">
-      <li><a href="https://github.com/webrium/blogger">GitHub</a></li>
-      <li><a href="https://github.com/webrium/webrium">Webrium</a></li>
-    </ul>
-
-    <p class="text-center font-weight-bold" style="color: #709360;" >Powered by Webrium Blogger</p>
-  </div>
-</footer>
+    <div>
+        <ul>
+            <li><a style="color: #cae1f7;" href="https://github.com/webrium/webrium">Github</a></li>
+            <li><a style="color: #cae1f7;" href="https://webrium.ir/docs">Documation</a></li>
+            <li><a style="color: #cae1f7;" href="https://webrium.ir/blog">Blog</a></li>
+        </ul>
+    </div>
+</div>
