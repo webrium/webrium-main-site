@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'vazir';
+  src: url('Vazir.woff2') format('woff2'),
+       url('Vazir.woff') format('woff'),
+       url('Vazir.ttf')  format('truetype');
+}
+
+body{
+  font-family: vazir;
+}
+
+label,title,button,a,h1,h2,h3,h4{
+  font-family: vazir !important;
+}
