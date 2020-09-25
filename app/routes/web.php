@@ -26,6 +26,10 @@ if ($post) {
 
 
 Route::get('','controllers@indexController->index');
+Route::get('docs',function ()
+{
+  redirect(url('docs/installation'));
+});
 Route::get('file/image/content/*','controllers@fileController->downloadFile');
 Route::get('profile/image/*','controllers@fileController->showProfileImage');
 
