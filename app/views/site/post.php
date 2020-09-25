@@ -1,17 +1,17 @@
 <style>
-  li {
+  .uk-nav-default>li {
     padding: 8px;
   }
 
 </style>
 
-<div class="uk-container uk-container-small">
+<div class="uk-container  uk-container-small">
 
-  <div class="uk-margin-top uk-padding-small uk-flex" style="background: #f8f8f8;">
+  <div class="uk-margin-auto uk-margin-top uk-padding-small" uk-grid style="background: #f8f8f8;">
 
 
 
-    <div class="uk-width-expand uk-padding-small">
+    <div class="uk-width-expand@m uk-padding-small">
 
       <div dir="ltr">
 
@@ -38,7 +38,6 @@
               <a href="#">{{$key}}</a>
               <ul class="uk-nav-sub">
                 @if(is_array($items))
-
                   @foreach($items as $item)
                     <li><a href="{{url($item->value)}}">{{$item->data}}</a></li>
                   @endforeach
