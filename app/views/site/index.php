@@ -4,7 +4,7 @@
   <div class="uk-flex-bottom uk-flex-center " uk-grid>
 
     <div class="uk-width-auto@m">
-      <img style="width:75px;" class="" src="@url('library/icon/svgs/solid/feather-alt.svg')" alt="">
+      <img style="width:75px;" class="" src="@url('library/icon/svgs/solid/feather-alt.svg')" alt="webrium logo">
     </div>
 
     <div class="uk-width-auto@m">

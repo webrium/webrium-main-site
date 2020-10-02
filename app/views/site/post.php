@@ -31,6 +31,14 @@
     <div class="uk-width-medium uk-padding-small" dir="ltr">
       <div class="uk-height-1-1" style="border-right: solid #e6e4e4 2px;">
         <div class="uk-width-1-1 uk-height-1-1">
+
+          <div class="uk-text-center uk-margin-right uk-padding-small">
+            <h1 class="uk-text-small" >فریم ورک وبریوم</h1>
+            <hr>
+          </div>
+
+
+
           <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
 
             @foreach( $site->menus->params as $key=>$items )
