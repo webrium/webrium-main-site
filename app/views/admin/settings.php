@@ -24,16 +24,6 @@
         <input id="tagline" type="text" class="uk-input" value="{{$config->tagline??''}}">
       </div>
 
-      <div class="uk-margin">
-        <label>Theme Name</label>
-        <input id="theme-name" type="text" class="uk-input" value="{{$config->theme_name??''}}">
-      </div>
-
-      <div class="uk-margin">
-        <label>Index Post ID</label>
-        <input id="index-post-id" type="text" class="uk-input" value="{{$config->index_id??''}}">
-      </div>
-
 
 
     </div>
@@ -95,10 +85,13 @@
     $('#config-items .config-item:not(#config-item-sample)').each(function(){
       config = $(this);
 
-      var name = config.find('input[name="name"]').val();
-      var value = config.find('input[name="value"]').val();
+      if (config.data('type') !='items') {
+        var name = config.find('input[name="name"]').val();
+        var value = config.find('input[name="value"]').val();
 
-      params.push({name:name,value:value});
+        params.push({name:name,value:value});
+      }
+
     });
 
     return params;
@@ -109,15 +102,11 @@
 
     var site_title = $('#site-title').val();
     var tagline = $('#tagline').val();
-    var theme_name = $('#theme-name').val();
-    var index_post_id = $('#index-post-id').val();
 
     var configs = getConfigParams();
 
     configs.push({name:'site_title',value:site_title,type:'general'});
     configs.push({name:'tagline'   ,value:tagline   ,type:'general'});
-    configs.push({name:'theme_name',value:theme_name,type:'general'});
-    configs.push({name:'index_id',value:index_post_id,type:'general'});
 
     post('@url("admin/settings/save")',{
       configs:configs
@@ -156,6 +145,7 @@
   }
 
   @foreach($configArray as $key=> $config)
+
     @if($config->type=='custom' || $config->type=='items')
       item = addConfig();
       item.data('name','{{$config->name}}');
