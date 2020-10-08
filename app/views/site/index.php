@@ -33,7 +33,15 @@
 
 
 
-  <div class="" >
+
+  <div class="uk-margin" >
+    <h4>{{$index->performance->value}}</h4>
+  </div>
+  <div class="uk-margin uk-text-center">
+    <img style="border-radius: 5px;" src="{{$index->performance->data}}" alt="{{$index->performance->value}}">
+  </div>
+
+  <div class="uk-margin uk-margin-large-top" >
     <h4>{{$index->whay->value}}</h4>
   </div>
 
@@ -48,5 +56,7 @@
 
     @endforeach
   </div>
+
+
 
 </div>
