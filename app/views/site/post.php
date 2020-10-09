@@ -2,6 +2,15 @@
   .uk-nav-default>li {
     padding: 8px;
   }
+  .uk-nav-sub>li{
+    padding-top: 8px;
+  }
+  .uk-nav-sub>li>a{
+    color: #5e3333 !important;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
 
 </style>
 
@@ -43,7 +52,7 @@
 
             @foreach( $site->menus->params as $key=>$items )
             <li class="uk-parent uk-active">
-              <a href="#">{{$key}}</a>
+              <a class="uk-text-bold" href="#{{$key}}">{{$key}}</a>
               <ul class="uk-nav-sub">
                 @if(is_array($items))
                   @foreach($items as $item)
